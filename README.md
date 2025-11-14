@@ -1,10 +1,12 @@
 # README
 
-Javascript Toolbox for Hugo Website Builder, uses:
+My Javascript Toolbox for the [Hugo Website Builder](https://gohugo.io):
 
-- <https://github.com/cnichte/hugo-update-lastmod> - track lastmod of images and set lastmod in markdown.
-- <https://github.com/cnichte/hugo-clean-cache> - Cleans the Hugo-Cache
-- <https://github.com/cnichte/sftp-push-sync> - Upload your Hugo Website with push-sync.
+- Track modified dates of images and set lastmod in markdown / frontmatter. See [git-repo](https://github.com/cnichte/hugo-update-lastmod)
+- Cleans the Hugo-Cache the smart way. See [git-repo](https://github.com/cnichte/hugo-clean-cache)
+- Upload your Hugo Website via sftp and a real push-sync. See [git-repo](https://github.com/cnichte/sftp-push-sync)
+
+For details, please visit the respective git repo.
 
 ## Setup
 

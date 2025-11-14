@@ -10,7 +10,8 @@ Javascript Toolbox for Hugo Website Builder, uses:
 
 ```bash
 npm i -D hugo-toolbox
-``
+```
+
 ## Usage
 
 in package.json

@@ -37,9 +37,9 @@
     "hugo-clean-cache": "^1.0.1",
     "hugo-update-lastmod": "^1.0.4",
     "picocolors": "^1.1.1",
-    "sftp-push-sync": "^1.0.8"
+    "sftp-push-sync": "^1.0.10"
   },
   "devDependencies": {
-    "npm-dependency-switcher": "^1.0.4"
+    "npm-dependency-switcher": "^1.0.6"
   }
 }

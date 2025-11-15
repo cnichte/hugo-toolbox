@@ -34,10 +34,10 @@
   },
   "homepage": "https://github.com/cnichte/hugo-toolbox#readme",
   "dependencies": {
-    "hugo-clean-cache": "file:../../../hugo-clean-cache/production/hugo-clean-cache",
-    "hugo-update-lastmod": "file:../../../hugo-update-lastmod/production/hugo-update-lastmod",
+    "hugo-clean-cache": "^1.0.1",
+    "hugo-update-lastmod": "^1.0.4",
     "picocolors": "^1.1.1",
-    "sftp-push-sync": "file:../../../sftp-push-sync/production/sftp-push-sync"
+    "sftp-push-sync": "^1.0.8"
   },
   "devDependencies": {
     "npm-dependency-switcher": "^1.0.4"

@@ -1,0 +1,16 @@
+{
+  "packages": [
+    {
+      "name": "sftp-push-sync",
+      "localPath": "../../../sftp-push-sync/production/sftp-push-sync"
+    },
+    {
+      "name": "hugo-update-lastmod",
+      "localPath": "../../../hugo-update-lastmod/production/hugo-update-lastmod"
+    },
+    {
+      "name": "hugo-clean-cache",
+      "localPath": "../../../hugo-clean-cache/production/hugo-clean-cache"
+    }
+  ]
+}

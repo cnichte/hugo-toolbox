@@ -7,11 +7,14 @@
     "hugo-toolbox": "bin/hugo-toolbox.mjs"
   },
   "scripts": {
+    "switch:dev": "npm-dependency-switcher dev",
+    "switch:prod": "npm-dependency-switcher prod",
     "release:patch": "npm run build:noop && npm version patch && git push && git push --tags && npm publish --access public",
     "release:minor": "npm run build:noop && npm version minor && git push && git push --tags && npm publish --access public",
     "release:major": "npm run build:noop && npm version major && git push && git push --tags && npm publish --access public",
     "build:noop": "echo \"nothing to build\"",
-    "ncu-me": "ncu -i --format group"
+    "ncu-me": "ncu -i --format group",
+    "tree": "tree -a -L 3 ./ > verzeichnis-struktur.txt"
   },
   "keywords": [
     "hugo",
@@ -31,9 +34,12 @@
   },
   "homepage": "https://github.com/cnichte/hugo-toolbox#readme",
   "dependencies": {
-    "hugo-clean-cache": "^1.0.1",
-    "hugo-update-lastmod": "^1.0.4",
+    "hugo-clean-cache": "file:../../../hugo-clean-cache/production/hugo-clean-cache",
+    "hugo-update-lastmod": "file:../../../hugo-update-lastmod/production/hugo-update-lastmod",
     "picocolors": "^1.1.1",
-    "sftp-push-sync": "^1.0.8"
+    "sftp-push-sync": "file:../../../sftp-push-sync/production/sftp-push-sync"
+  },
+  "devDependencies": {
+    "npm-dependency-switcher": "^1.0.4"
   }
 }

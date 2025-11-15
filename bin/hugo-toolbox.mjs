@@ -1,4 +1,13 @@
 #!/usr/bin/env node
+/**
+ * The one and only Hugo-Toolbox.
+ * 
+ * My personal Swiss-Army Tool for Hugo.
+ * This is a wrapper arround some usefull tools.
+ * 
+ * @author Carsten Nichte, 2025
+ * 
+ */
 import { spawn } from "child_process";
 import { createRequire } from "module";
 import path from "path";

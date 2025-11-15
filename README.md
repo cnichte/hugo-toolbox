@@ -8,10 +8,16 @@ My Javascript Toolbox for the [Hugo Website Builder](https://gohugo.io):
 
 For details, please visit the respective git repo.
 
-## Setup
+## Install
 
 ```bash
 npm i -D hugo-toolbox
+# or
+npm install --save-dev hugo-toolbox
+# or
+yarn add --dev hugo-toolbox
+# or
+pnpm add -D hugo-toolbox
 ```
 
 ## Usage

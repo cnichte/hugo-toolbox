@@ -1,6 +1,6 @@
 {
   "name": "hugo-toolbox",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Small CLI wrapper for common Hugo helper tools (update lastmod, clean cache, SFTP sync).",
   "type": "module",
   "bin": {

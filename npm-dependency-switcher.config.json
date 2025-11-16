@@ -11,6 +11,10 @@
     {
       "name": "hugo-clean-cache",
       "localPath": "../../../hugo-clean-cache/production/hugo-clean-cache"
+    },
+    {
+      "name": "hugo-broken-links-checker",
+      "localPath": "../../../hugo-broken-links-checker/production/hugo-broken-links-checker"
     }
   ]
 }

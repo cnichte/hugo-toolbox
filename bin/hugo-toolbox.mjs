@@ -2,16 +2,16 @@
 /**
  * The one and only Hugo-Toolbox.
  * 
- * My personal Swiss-Army Tool for Hugo.
+ * My personal Swiss-Army-Tool for Hugo.
  * This is a wrapper arround some usefull tools.
  * 
  * @author Carsten Nichte, 2025
  * 
  */
+// bin/hugo-toolbox.mjs
 import { spawn } from "child_process";
 import { createRequire } from "module";
 import path from "path";
-import { fileURLToPath } from "url";
 import pc from "picocolors";
 
 const require = createRequire(import.meta.url);
@@ -27,12 +27,16 @@ ${pc.bold("Commands:")}
   ${pc.cyan("update-lastmod")}   Aktualisiert lastmod in Hugo-Bundles
   ${pc.cyan("clean-cache")}      Löscht Hugo-Caches / generierte Ressourcen
   ${pc.cyan("sync")}             SFTP-Sync (Wrapper um sftp-push-sync)
+  ${pc.cyan("check-links")}      Broken-Link-Check (Wrapper um hugo-broken-links)
 
 Beispiele:
   hugo-toolbox update-lastmod
   hugo-toolbox clean-cache
   hugo-toolbox sync staging --dry-run
   hugo-toolbox sync prod
+  hugo-toolbox check-links
+  hugo-toolbox check-links --dry-run
+  hugo-toolbox check-links --config hugo-broken-links.config.json
 `);
 }
 
@@ -70,9 +74,7 @@ function runSubcommand(binPath, args) {
 
     child.on("exit", (code, signal) => {
       if (signal) {
-        console.error(
-          pc.red(`Subprozess durch Signal beendet: ${signal}`)
-        );
+        console.error(pc.red(`Subprozess durch Signal beendet: ${signal}`));
         process.exitCode = 1;
       } else if (typeof code === "number") {
         process.exitCode = code;
@@ -109,6 +111,15 @@ async function main() {
 
       case "sync": {
         const bin = resolveBin("sftp-push-sync", "sftp-push-sync");
+        await runSubcommand(bin, rest);
+        break;
+      }
+
+      case "check-links": {
+        // Erwartet ein eigenes Modul zB.:
+        //  "name": "hugo-broken-links",
+        //  "bin": { "hugo-broken-links": "bin/hugo-broken-links.mjs" }
+        const bin = resolveBin("hugo-broken-links-checker", "hugo-broken-links-checker");
         await runSubcommand(bin, rest);
         break;
       }

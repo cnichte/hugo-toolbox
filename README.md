@@ -2,11 +2,12 @@
 
 My Javascript Toolbox for the [Hugo Website Builder](https://gohugo.io):
 
-- Track modified dates of images and set lastmod in markdown / frontmatter. See [git-repo](https://github.com/cnichte/hugo-update-lastmod)
-- Cleans the Hugo-Cache the smart way. See [git-repo](https://github.com/cnichte/hugo-clean-cache)
-- Upload your Hugo Website via sftp and a real push-sync. See [git-repo](https://github.com/cnichte/sftp-push-sync)
+1. Track modified dates of images and set lastmod in markdown / frontmatter. See [git-repo](https://github.com/cnichte/hugo-update-lastmod)
+1. Cleans the Hugo-Cache the smart way. See [git-repo](https://github.com/cnichte/hugo-clean-cache)
+1. Upload your Hugo Website via sftp and a real push-sync. See [git-repo](https://github.com/cnichte/sftp-push-sync)
+1. Check the Website for broken links. See [git-repo](https://github.com/cnichte/hugo-broken-links-checker)
 
-For details, please visit the respective git repo.
+Please visit the git repo for detailed manual.
 
 ## Install
 
@@ -43,5 +44,10 @@ in package.json
   "sync:prod:dry": "hugo-toolbox sync prod --dry-run",
   "sp": "npm run sync:prod",
   "spd": "npm run sync:prod:dry"
+
+  "check-links": "hugo-toolbox check-links carsten-local all",
+  "check-links:intern": "hugo-toolbox check-links carsten-local intern",
+  "check-links:extern": "hugo-toolbox check-links carsten-local extern",
+  "check-links:dry": "hugo-toolbox check-links carsten-local all --dry-run"
 }
 ```

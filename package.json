@@ -35,7 +35,7 @@
   "homepage": "https://github.com/cnichte/hugo-toolbox#readme",
   "dependencies": {
     "hugo-clean-cache": "^1.0.1",
-    "hugo-update-lastmod": "^1.0.6",
+    "hugo-update-lastmod": "^1.0.7",
     "picocolors": "^1.1.1",
     "sftp-push-sync": "^1.0.16"
   },

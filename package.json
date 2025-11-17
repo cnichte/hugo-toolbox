@@ -41,6 +41,6 @@
     "sftp-push-sync": "^1.0.18"
   },
   "devDependencies": {
-    "npm-dependency-switcher": "^1.0.6"
+    "npm-dependency-switcher": "^1.0.7"
   }
 }

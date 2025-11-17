@@ -18,25 +18,27 @@ const require = createRequire(import.meta.url);
 
 function printHelp() {
   console.log(`
-${pc.bold("hugo-toolbox")} – Helferskripte für Hugo-Projekte
+${pc.bold("hugo-toolbox")} – Helper scripts for Hugo projects
 
 ${pc.bold("Usage:")}
   hugo-toolbox <command> [...args]
 
 ${pc.bold("Commands:")}
-  ${pc.cyan("update-lastmod")}   Aktualisiert lastmod in Hugo-Bundles
-  ${pc.cyan("clean-cache")}      Löscht Hugo-Caches / generierte Ressourcen
-  ${pc.cyan("sync")}             SFTP-Sync (Wrapper um sftp-push-sync)
-  ${pc.cyan("check-links")}      Broken-Link-Check (Wrapper um hugo-broken-links)
+  ${pc.cyan("update-lastmod")}   Updated lastmod in Hugo bundles
+  ${pc.cyan("clean-cache")}      Deletes Hugo caches / generated resources
+  ${pc.cyan("sync")}             SFTP-Sync (Wrapper around sftp-push-sync)
+  ${pc.cyan("check-links")}      Broken-Link-Check (Wrapper around hugo-broken-links-checker)
 
-Beispiele:
+Examples:
   hugo-toolbox update-lastmod
   hugo-toolbox clean-cache
   hugo-toolbox sync staging --dry-run
   hugo-toolbox sync prod
   hugo-toolbox check-links
   hugo-toolbox check-links --dry-run
-  hugo-toolbox check-links --config hugo-broken-links.config.json
+  hugo-toolbox check-links --config hugo-broken-links-checker.config.json
+
+  You can find detailed instructions in the git repos.
 `);
 }
 

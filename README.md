@@ -23,6 +23,14 @@ pnpm add -D hugo-toolbox
 
 ## Usage
 
+### CLI
+
+```bash
+npx hugo-toolbox --help # help, -h
+```
+
+### Scripts
+
 in package.json
 
 ```bash

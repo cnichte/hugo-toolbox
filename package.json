@@ -17,7 +17,7 @@
     "major": "npm run switch:prod && git add . && git commit -m \"bump versions\" && git pull --rebase && git push && npm run release:major && npm run switch:dev",
     "build:noop": "echo \"nothing to build\"",
     "ncu-me": "ncu -i --format group",
-    "tree": "tree -a -L 3 ./ > verzeichnis-struktur.txt"
+    "tree": "tree -a -L 3 ./ > directory structure.txt"
   },
   "keywords": [
     "hugo",
@@ -38,10 +38,10 @@
   "homepage": "https://github.com/cnichte/hugo-toolbox#readme",
   "dependencies": {
     "picocolors": "^1.1.1",
-    "hugo-clean-cache": "^1.0.1",
-    "hugo-update-lastmod": "^1.0.7",
-    "hugo-broken-links-checker": "^1.0.3",
-    "sftp-push-sync": "^1.0.21"
+    "hugo-clean-cache": "file:../../../hugo-clean-cache/production/hugo-clean-cache",
+    "hugo-update-lastmod": "file:../../../hugo-update-lastmod/production/hugo-update-lastmod",
+    "hugo-broken-links-checker": "file:../../../hugo-broken-links-checker/production/hugo-broken-links-checker",
+    "sftp-push-sync": "file:../../../sftp-push-sync/production/sftp-push-sync"
   },
   "devDependencies": {
     "npm-dependency-switcher": "^1.0.8"

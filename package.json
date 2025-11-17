@@ -12,6 +12,7 @@
     "release:patch": "npm run build:noop && npm version patch && git push && git push --tags && npm publish --access public",
     "release:minor": "npm run build:noop && npm version minor && git push && git push --tags && npm publish --access public",
     "release:major": "npm run build:noop && npm version major && git push && git push --tags && npm publish --access public",
+    "rp": "npm run switch:prod && git add . && git commit -m \"bump versions\" && git pull --rebase && git push && npm run release:patch && npm run switch:dev",
     "build:noop": "echo \"nothing to build\"",
     "ncu-me": "ncu -i --format group",
     "tree": "tree -a -L 3 ./ > verzeichnis-struktur.txt"

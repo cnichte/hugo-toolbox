@@ -43,7 +43,7 @@ Examples:
 }
 
 /**
- * Findet den Bin-Pfad eines Pakets über dessen package.json
+ * Find the bin path of a package via its package.json
  */
 function resolveBin(pkgName, binName = pkgName) {
   const pkgJsonPath = require.resolve(`${pkgName}/package.json`);
@@ -58,7 +58,7 @@ function resolveBin(pkgName, binName = pkgName) {
     relBin = pkg.bin[binName];
   } else {
     throw new Error(
-      `Kein bin-Eintrag für "${binName}" in package "${pkgName}" gefunden.`
+      `No bin entry found for "${binName}" in package "${pkgName}".`
     );
   }
 
@@ -66,7 +66,7 @@ function resolveBin(pkgName, binName = pkgName) {
 }
 
 /**
- * Startet einen Subprozess: node <binPath> ...args
+ * Starts a subprocess: node <binPath> ...args
  */
 function runSubcommand(binPath, args) {
   return new Promise((resolve) => {
@@ -76,7 +76,7 @@ function runSubcommand(binPath, args) {
 
     child.on("exit", (code, signal) => {
       if (signal) {
-        console.error(pc.red(`Subprozess durch Signal beendet: ${signal}`));
+        console.error(pc.red(`Subprocess terminated by signal: ${signal}`));
         process.exitCode = 1;
       } else if (typeof code === "number") {
         process.exitCode = code;
@@ -118,7 +118,7 @@ async function main() {
       }
 
       case "check-links": {
-        // Erwartet ein eigenes Modul zB.:
+        // Expect a separate module, e.g.:
         //  "name": "hugo-broken-links",
         //  "bin": { "hugo-broken-links": "bin/hugo-broken-links.mjs" }
         const bin = resolveBin("hugo-broken-links-checker", "hugo-broken-links-checker");

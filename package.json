@@ -12,7 +12,9 @@
     "release:patch": "npm run build:noop && npm version patch && git push && git push --tags && npm publish --access public",
     "release:minor": "npm run build:noop && npm version minor && git push && git push --tags && npm publish --access public",
     "release:major": "npm run build:noop && npm version major && git push && git push --tags && npm publish --access public",
-    "rp": "npm run switch:prod && git add . && git commit -m \"bump versions\" && git pull --rebase && git push && npm run release:patch && npm run switch:dev",
+    "patch": "npm run switch:prod && git add . && git commit -m \"bump versions\" && git pull --rebase && git push && npm run release:patch && npm run switch:dev",
+    "minor": "npm run switch:prod && git add . && git commit -m \"bump versions\" && git pull --rebase && git push && npm run release:minor && npm run switch:dev",
+    "major": "npm run switch:prod && git add . && git commit -m \"bump versions\" && git pull --rebase && git push && npm run release:major && npm run switch:dev",
     "build:noop": "echo \"nothing to build\"",
     "ncu-me": "ncu -i --format group",
     "tree": "tree -a -L 3 ./ > verzeichnis-struktur.txt"
@@ -39,7 +41,7 @@
     "hugo-clean-cache": "^1.0.1",
     "hugo-update-lastmod": "^1.0.7",
     "hugo-broken-links-checker": "^1.0.3",
-    "sftp-push-sync": "^1.0.20"
+    "sftp-push-sync": "^1.0.21"
   },
   "devDependencies": {
     "npm-dependency-switcher": "^1.0.8"

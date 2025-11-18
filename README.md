@@ -5,7 +5,7 @@ My Javascript Toolbox for the [Hugo Website Builder](https://gohugo.io):
 1. Cleans the Hugo-Cache the smart way. See [git-repo](https://github.com/cnichte/hugo-clean-cache)
 1. Track modified dates of images and set lastmod in markdown / frontmatter. See [git-repo](https://github.com/cnichte/hugo-update-lastmod)
 1. Check the Website for broken links. See [git-repo](https://github.com/cnichte/hugo-broken-links-checker)
-1. Upload your Hugo Website via sftp and a real push-sync. See [git-repo](https://github.com/cnichte/sftp-push-sync)
+1. Upload your Hugo Website via sftp and a real push-sync. See [git-repo](https://github.com/cnichte/sftp-push-sync) [BREAKING CHANGE]
 
 Please visit the git repos for detailed manuals.
 

@@ -66,3 +66,4 @@ For more options check the repos of the tools:
 - <https://github.com/cnichte/hugo-update-lastmod>
 - <https://github.com/cnichte/hugo-broken-links-checker>
 - <https://github.com/cnichte/sftp-push-sync>
+- <https://carsten-nichte.de>

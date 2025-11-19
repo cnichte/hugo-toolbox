@@ -42,7 +42,7 @@
     "hugo-clean-cache": "^1.0.1",
     "hugo-update-lastmod": "^1.0.8",
     "hugo-broken-links-checker": "^1.0.3",
-    "sftp-push-sync": "^2.1.0"
+    "sftp-push-sync": "^2.1.1"
   },
   "devDependencies": {
     "npm-dependency-switcher": "^1.0.8"

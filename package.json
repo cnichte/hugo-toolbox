@@ -14,7 +14,8 @@
     "release:major": "npm run build:noop && npm version major && git push && git push --tags && npm publish --access public",
     "patch": "npm run switch:prod && git add . && git commit -m \"bump versions\" && git pull --rebase && git push && npm run release:patch && npm run switch:dev",
     "minor": "npm run switch:prod && git add . && git commit -m \"bump versions\" && git pull --rebase && git push && npm run release:minor && npm run switch:dev",
-    "major": "npm run switch:prod && git add . && git commit -m \"breaking change in sync\" && git pull --rebase && git push && npm run release:major && npm run switch:dev",
+    "major-old": "npm run switch:prod && git add . && git commit -m \"breaking change in sync\" && git pull --rebase && git push && npm run release:major && npm run switch:dev",
+    "major": "npm run switch:prod && git pull --rebase && git add . && git commit -m \"sidecars - breaking change in sync\" && npm run release:major && npm run switch:dev",
     "build:noop": "echo \"nothing to build\"",
     "ncu-me": "ncu -i --format group",
     "tree": "tree -a -L 3 ./ > directory structure.txt"
@@ -39,7 +40,7 @@
   "dependencies": {
     "picocolors": "^1.1.1",
     "hugo-clean-cache": "^1.0.1",
-    "hugo-update-lastmod": "^1.0.7",
+    "hugo-update-lastmod": "^1.0.8",
     "hugo-broken-links-checker": "^1.0.3",
     "sftp-push-sync": "^2.0.0"
   },
